@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <style>
-        #sa{
+        /* #sa{
             border:5px solid red;
             width:300px;
             height:400px;
             background-color: aqua;
-        }
+        } */
 
     </style>
 </head>
-<body>
+<body id="adi">
   
-    <div id="sa">
+    <!-- <div id="sa">
         <button onclick="abes()">Click</button>
         <p id="sat"> </p>
 
@@ -23,7 +23,27 @@
         {
 document.getElementById("sa").innerHTML="hii";
         }
-      </script>
+      </script> -->
+      <button onclick="red()">red</button>
+        <button onclick="blue()">blue</button>
+          <button onclick="green()">green</button>
+    <script>
+        function red()
+        {
+            document.getElementById("adi").style.backgroundColor="red";
+        }
+
+         function blue()
+        {
+            document.getElementById("adi").style.backgroundColor="blue";
+        }
+
+         function green()
+        {
+            document.getElementById("adi").style.backgroundColor="green";
+        }
+
+    </script>
 
     
 </body>
