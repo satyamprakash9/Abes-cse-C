@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        let num1 = parseInt(prompt("Enter the first integer:"));
+        let num2 = parseInt(prompt("Enter the second integer:"));
+
+        let even1 = [];
+        let odd1 = [];
+        let even2 = [];
+        let odd2 = [];
+
+    
+        document.write("<h3>Multiplication Table of " + num1 + "</h3>");
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) {
+                even1.push(num1 * i);
+                document.write(i + " (even): " + (num1 * i) + "<br>");
+            } else {
+                odd1.push(num1 * i);
+                document.write(i + " (odd): " + (num1 * i) + "<br>");
+            }
+        }
+
+       
+        document.write("<h3>Multiplication Table of " + num2 + "</h3>");
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) {
+                even2.push(num2 * i);
+                document.write(i + " (even): " + (num2 * i) + "<br>");
+            } else {
+                odd2.push(num2 * i);
+                document.write(i + " (odd): " + (num2 * i) + "<br>");
+            }
+        }
+        document.write("<hr>");
+        document.write("<hr>");
+        document.write("<h3>Even Results of " + num1 + ": " + even1.join(", ") + "</h3>");
+        document.write("<h3>Odd Results of " + num1 + ": " + odd1.join(", ") + "</h3>");
+        document.write("<h3>Even Results of " + num2 + ": " + even2.join(", ") + "</h3>");
+        document.write("<h3>Odd Results of " + num2 + ": " + odd2.join(", ") + "</h3>");
+    </script>
+</body>
+</html>

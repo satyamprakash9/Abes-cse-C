@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter App</title>
+    <style>
+        body {
+            background: #ebd1b1;
+        }
+        .container {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 40px; /* space between boxes */
+            margin-top: 50px;
+        }
+        .box {
+            background: linear-gradient(90deg, #0077ff, #6a00f4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            height: 300px;
+            width: 300px;
+            border-radius: 15px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1st box -->
+        <div class="box"></div>
+
+        <!-- 2nd box (Counter App) -->
+        <div class="box">
+            <img src="sat.jpg" alt="logo" 
+                 style="height: 60px; width: 60px; border-radius: 50%; border: 2px solid white; margin-bottom: 20px;">
+
+            <h3 style="color: white; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Counter App</h3>
+
+            <!-- Counter value -->
+            <h1 id="count" style="color: white; font-size: 40px; margin-bottom: 20px;">0</h1>
+
+            <!-- Buttons -->
+            <div>
+                <button class="btn" onclick="add()">+</button>
+                <button class="btn" onclick="subtract()">-</button>
+            </div>
+        </div>
+
+        <!-- 3rd box -->
+        <div class="box"></div>
+    </div>
+
+<script>
+    let count = 0;  
+
+    function add() {
+        if(count >= 12){
+            alert("maximum value reached");
+          
+        }
+        count++;
+        document.getElementById("count").innerText = count;
+    }
+
+    function subtract() {
+        if(count > 0) {   
+            count--;
+        }
+        document.getElementById("count").innerText = count;
+    }
+</script>
+</body>
+</html>
